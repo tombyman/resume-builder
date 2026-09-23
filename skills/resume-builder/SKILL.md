@@ -33,11 +33,11 @@ description: Адаптация существующего IT-резюме по�
 
 ## Сборка PDF (локально)
 
-По умолчанию pandoc берёт шрифт Latin Modern, в котором **нет кириллицы** — mainfont обязателен. Шаблон вёрстки резюме лежит в `templates/resume.latex` (относительно корня проекта):
+По умолчанию pandoc берёт шрифт Latin Modern, в котором **нет кириллицы** — mainfont обязателен. Шаблон вёрстки резюме лежит рядом со скилом: `${CLAUDE_SKILL_DIR}/templates/resume.latex` (путь подставляется Claude Code при запуске):
 
 ```bash
 pandoc "YYYY-MM-DD Фамилия Имя - резюме ru.md" --pdf-engine=xelatex \
-  --template=templates/resume.latex \
+  --template=${CLAUDE_SKILL_DIR}/templates/resume.latex \
   -V mainfont="DejaVu Serif" -V sansfont="DejaVu Sans" \
   -V fontsize=11pt -V geometry:margin=1.8cm \
   -o "YYYY-MM-DD Фамилия Имя - резюме ru.pdf"

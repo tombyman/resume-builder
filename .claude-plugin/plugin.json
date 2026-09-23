@@ -1,0 +1,6 @@
+{
+  "name": "resume-builder",
+  "description": "Адаптация существующего IT-резюме под российский рынок труда (hh.ru): RU/EN версии в Markdown и PDF, опционально — под конкретную вакансию.",
+  "version": "0.1.0",
+  "author": { "name": "Alexey Korol" }
+}

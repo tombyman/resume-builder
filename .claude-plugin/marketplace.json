@@ -1,0 +1,12 @@
+{
+  "name": "resume-builder",
+  "description": "Скил resume-builder: адаптация IT-резюме под российский рынок труда (hh.ru), RU/EN версии в Markdown и PDF.",
+  "owner": { "name": "Alexey Korol" },
+  "plugins": [
+    {
+      "name": "resume-builder",
+      "source": "./",
+      "description": "Адаптация существующего IT-резюме под российский рынок труда (hh.ru): RU/EN версии в Markdown и PDF, опционально — под конкретную вакансию."
+    }
+  ]
+}

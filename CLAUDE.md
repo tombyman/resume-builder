@@ -8,8 +8,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Структура
 
-- `.claude/skills/resume-builder/SKILL.md` — входная точка скила
-- `.claude/skills/resume-builder/references/*.md` — справочные материалы, которые скил читает по мере необходимости
+Репозиторий — одновременно Claude Code плагин и marketplace (корень репозитория = корень плагина):
+
+- `.claude-plugin/plugin.json` — манифест плагина
+- `.claude-plugin/marketplace.json` — манифест marketplace (обязателен для установки по URL)
+- `skills/resume-builder/SKILL.md` — входная точка скила (каноническое расположение)
+- `skills/resume-builder/references/*.md` — справочные материалы, которые скил читает по мере необходимости
+- `skills/resume-builder/templates/resume.latex` — шаблон вёрстки PDF; в SKILL.md ссылается как `${CLAUDE_SKILL_DIR}/templates/resume.latex`
+- `.claude/skills/resume-builder` — symlink на `../../skills/resume-builder`, чтобы скил работал и при локальной работе в этом репозитории
+
+## Установка в других проектах
+
+По URL репозитория (или shorthand `owner/repo` для GitHub):
+
+```bash
+claude plugin marketplace add <url-репозитория>
+claude plugin install resume-builder@resume-builder
+```
+
+Локальная проверка без публикации: `claude plugin validate .` и запуск с `claude --plugin-dir .`.
 
 ## Правила
 

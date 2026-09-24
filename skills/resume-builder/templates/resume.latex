@@ -1,3 +1,4 @@
+% Шаблон на основе default.latex из pandoc (MIT, © John MacFarlane и другие)
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
 \PassOptionsToPackage{hyphens}{url}

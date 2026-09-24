@@ -91,3 +91,7 @@ claude --plugin-dir .
 ```
 
 Подробности о структуре и правилах разработки — в [CLAUDE.md](CLAUDE.md).
+
+## Лицензия
+
+[MIT](LICENSE) © 2026 Alexey Korol. Шаблон `templates/resume.latex` основан на default.latex из [pandoc](https://pandoc.org/) (MIT, © John MacFarlane и другие).
